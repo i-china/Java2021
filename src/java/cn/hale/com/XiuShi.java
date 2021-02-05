@@ -12,5 +12,7 @@ public class XiuShi {
     protected static final int BOXWITH = 32;
     public static void main(String[] args){
 //        方法体
+//        static  静态变量 只拷贝一份，类变量，
+//        static    静态方法 不能使用类的非静态变量，
     }
 }
