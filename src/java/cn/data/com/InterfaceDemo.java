@@ -7,5 +7,6 @@ package cn.data.com;
 interface InterfaceDemo {
     void run();
     String getName();
+    void setName(String name);
 }
 
