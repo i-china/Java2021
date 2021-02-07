@@ -11,6 +11,13 @@ public class InterfaceTestDemo  {
         id.setName("Hale");
         String n = id.getName();
         System.out.println(n);
+
+        InterTests it = new InterTests();
+        it.say();
+        it.setAge(23);
+        it.getAge();
+        it.setName("Root");
+        it.getName();
     }
 }
 
@@ -30,6 +37,34 @@ class InterDemo implements InterfaceDemo {
     public String getName() {
         return name;
     }
+}
 
+class InterTests implements InterTest {
+    protected int age;
+    public String name;
+    @Override
+    public void run(){
+        System.out.println("InterTests run ");
+    }
+    @Override
+    public String getName(){
+        return name;
+    }
+    @Override
+    public void setName(String name){
+        this.name = name;
+    }
+    @Override
+    public void say(){
+        System.out.println("InterTests say ");
+    }
+    @Override
+    public void setAge(int age){
+        this.age = age;
+    }
+    @Override
+    public int getAge(){
+        return age;
+    }
 
 }
