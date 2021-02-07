@@ -6,8 +6,8 @@ package cn.java.com;
  **/
 public class ClassInstance {
     public static void main(String[] args) {
-        Persons p = new Persons("Hale",23);
-        System.out.println(p.getName() + p.getAge());
+//        Persons p = new Persons("Hale",23);
+//        System.out.println(p.getName() + p.getAge());
     }
 }
 
