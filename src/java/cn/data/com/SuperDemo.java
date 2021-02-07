@@ -8,6 +8,8 @@ public class SuperDemo {
     public static void main(String[] args) {
         FatherSuper sf = new FatherSuper(23);
 //        sf.age = 24;
+        System.out.println(sf.name);
+        System.out.println(sf.age);
     }
 }
 
@@ -17,10 +19,10 @@ class FatherSuper {
     protected String name;
     public final int age;
 
-   /* public FatherSuper(String name,int age){
+    public FatherSuper(String name,int age){
         this.name = name;
         this.age = age;
-    }*/
+    }
 
    public FatherSuper(int age){
        this.age = age;
