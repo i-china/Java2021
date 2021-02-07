@@ -12,14 +12,18 @@ public class SuperDemo {
 }
 
 class FatherSuper {
-    protected final String name;
+//    protected final String name;
 //    public final int age = 23;
     public final int age;
 
-    public FatherSuper(String name,int age){
+   /* public FatherSuper(String name,int age){
         this.name = name;
         this.age = age;
-    }
+    }*/
+
+   public FatherSuper(int age){
+       this.age = age;
+   }
 
     public String hello(){
         return "hi " + name;
