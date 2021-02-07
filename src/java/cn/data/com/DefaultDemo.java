@@ -2,6 +2,7 @@ package cn.data.com;
 
 /**
  * update emjoy
+ * interface default
  * @author HaleLv
  * @date 2021-02-08
  **/
