@@ -1,5 +1,9 @@
 package cn.data.com;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
 /**
  * @author HaleLv
  * @date 2021-02-07
@@ -15,9 +19,14 @@ public class InterfaceTestDemo  {
         InterTests it = new InterTests();
         it.say();
         it.setAge(23);
-        it.getAge();
+        int age = it.getAge();
+        System.out.println(age);
         it.setName("Root");
         it.getName();
+        it.run();
+
+        List list  = new ArrayList();
+        Collection coll = list;
     }
 }
 
