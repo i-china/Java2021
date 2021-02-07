@@ -6,7 +6,7 @@ package cn.data.com;
  **/
 public class SuperDemo {
     public static void main(String[] args) {
-        FatherSuper sf = new FatherSuper(name);
+        FatherSuper sf = new FatherSuper(23);
 //        sf.age = 24;
     }
 }
@@ -14,6 +14,7 @@ public class SuperDemo {
 class FatherSuper {
 //    protected final String name;
 //    public final int age = 23;
+    protected String name;
     public final int age;
 
    /* public FatherSuper(String name,int age){
@@ -35,8 +36,8 @@ class FatherSuper {
 }
 
 class SonSuper extends FatherSuper {
-    SonSuper() {
-        super(name);
+    public SonSuper(int age) {
+        super(age);
     }
 
     @Override
