@@ -8,7 +8,7 @@ public class AbstractDemo {
     public static void main(String[] args) {
 //    abOne ab = new abOne();
         abTwo at = new abTwo();
-
+        at.run();
     }
 }
 
