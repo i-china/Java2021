@@ -6,8 +6,7 @@ package cn.classdemo.com;
  **/
 public class ClassPathDemo {
     public static void main(String[] args) {
-
+        String classpathDemo = "java -classpath .; cn.hale.com.InnerOuterDemo";
+        String javacp = "java -cp . cn.data.com.ClassDemo";
     }
 }
-
-
