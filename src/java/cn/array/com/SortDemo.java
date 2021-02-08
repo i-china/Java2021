@@ -19,6 +19,6 @@ public class SortDemo {
                 }
             }
         }
-        System.out.println(a);
+        System.out.println(Arrays.toString(a));
     }
 }
