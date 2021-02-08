@@ -1,5 +1,8 @@
 package com.java.cn;
 
+import javax.sound.midi.Soundbank;
+import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 
 /**
@@ -7,7 +10,7 @@ import java.util.Arrays;
  * @date 2021-02-08
  **/
 public class CharString {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws UnsupportedEncodingException {
         int[] i = {1,231,321,321,3,21,21321,123};
         Score sc = new Score(i);
 //        System.out.println(sc);
@@ -28,8 +31,12 @@ class Score{
     }
 }
 class ByteDemo{
-    ByteDemo(){
+    ByteDemo() throws UnsupportedEncodingException {
         byte[] b = "hello".getBytes();
+        byte[] b1 = "Hello".getBytes("UTF-8");
+        byte[] b2 = "hi".getBytes("GBK");
+        byte[] b3 = "hi".getBytes(StandardCharsets.UTF_8);
+        System.out.println(b3);
         System.out.println(b);
     }
 }
