@@ -20,8 +20,11 @@ class asOuter {
     }
 
     void asyncHello(){
+       /* new name(){
+        匿名类
+        };*/
 //       类型            实例化
-        Runnable r = new Runnable(){
+        Runnable r = new Runnable(){    // 定义内部类
 
             @Override
             public void run() {
@@ -30,4 +33,5 @@ class asOuter {
         };
         new Thread(r).start();
     }
+
 }
