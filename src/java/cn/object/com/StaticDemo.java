@@ -1,5 +1,7 @@
 package cn.object.com;
 
+import java.sql.SQLOutput;
+
 /**
  * @author HaleLv
  * @date 2021-02-08
@@ -16,9 +18,9 @@ public class StaticDemo {
         System.out.println(ne.number);
         One.number = 23;
         System.out.println(One.number);
-
+        StaticMethod.setNumber(213);
+        System.out.println(StaticMethod.number);
     }
-
 }
 
 class One {
@@ -30,5 +32,13 @@ class One {
         this.name = name;
         this.age = age;
         this.number = number;
+    }
+}
+
+class StaticMethod {
+    public static int number;
+
+    public static void setNumber(int value){
+        number = value;
     }
 }
