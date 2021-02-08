@@ -6,3 +6,10 @@ package cn.object.com;
  **/
 public class InterStaticDemo {
 }
+
+interface InterStatic {
+    int Male = 1;
+    int female = 2;
+}
+
+
