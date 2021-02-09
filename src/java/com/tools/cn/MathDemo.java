@@ -2,6 +2,7 @@ package com.tools.cn;
 
 import com.sun.media.sound.SoftTuning;
 
+import java.security.SecureRandom;
 import java.util.Random;
 
 /**
@@ -18,6 +19,8 @@ public class MathDemo {
         Random a = new Random(123);
         System.out.println(" random is " + a.nextInt());
 
+        SecureRandom sr = new SecureRandom();
+        System.out.println(sr.nextInt(1000));   // bound 是一个范围
     }
 }
 
