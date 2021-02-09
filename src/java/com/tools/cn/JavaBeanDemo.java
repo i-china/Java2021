@@ -1,4 +1,4 @@
-package com.jbean.cn;
+package com.tools.cn;
 
 import java.beans.BeanInfo;
 import java.beans.IntrospectionException;
