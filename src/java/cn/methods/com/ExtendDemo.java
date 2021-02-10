@@ -13,6 +13,26 @@ public class ExtendDemo {
         Class o = n.getSuperclass();
         System.out.println(o);
         System.out.println(o.getSuperclass());
+
+        Class s = Integer.class;
+        Class[] is = s.getInterfaces();
+        for(Class ii : is){
+            System.out.println(ii);
+        }
+
+        Class ss = Integer.class.getSuperclass();
+        Class[] cs = ss.getInterfaces();
+        for(Class ci : cs){
+            System.out.println(ci);
+        }
     }
 }
+
+/*
+class Interface1 {
+    public Interface1(){
+
+    }
+}
+*/
 
