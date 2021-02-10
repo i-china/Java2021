@@ -9,9 +9,9 @@ import java.lang.reflect.Proxy;
  * @date 2021-02-10
  **/
 public class DongTaiProxyDemo {
-    public static void main(String[] args) {
-        DynamicDemo dd = new DynamicDemo();
-        dd.morning("hale");
+    public static void main(String[] args) throws Throwable {
+//        DynamicDemo dd = new DynamicDemo();
+//        dd.morning("hale");
 
         InvocationHandler handler = new InvocationHandler(){
               @Override
@@ -43,5 +43,19 @@ interface DynamicOne{
 }
 
 interface Hello{
-    void morning(String name);
+    void morning(String name) throws Throwable;
+}
+
+class DynamicProxy implements Hello{
+    InvocationHandler handler;
+    public DynamicProxy(InvocationHandler handler){
+        this.handler = handler;
+    }
+    public void morning(String name) throws Throwable {
+        handler.invoke(
+                this,
+                Hello.class.getMethod("morning",String.class),
+                new Object[] { name }
+        );
+    }
 }
