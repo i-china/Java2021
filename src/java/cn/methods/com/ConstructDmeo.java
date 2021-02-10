@@ -11,6 +11,10 @@ public class ConstructDmeo {
         Constructor ct = Integer.class.getConstructor(int.class);
         Integer n1 = (Integer) ct.newInstance(123);
         System.out.println(n1);
+
+        Constructor st = String.class.getConstructor(String.class);
+        String s1 = (String) st.newInstance("567");
+        System.out.println(s1);
     }
 }
 
