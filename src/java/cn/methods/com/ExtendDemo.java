@@ -1,5 +1,7 @@
 package cn.methods.com;
 
+import java.io.Serializable;
+
 /**
  * @author HaleLv
  * @date 2021-02-10
@@ -25,6 +27,17 @@ public class ExtendDemo {
         for(Class ci : cs){
             System.out.println(ci);
         }
+
+        System.out.println(java.io.DataInputStream.class.getSuperclass());
+        System.out.println(java.io.Closeable.class.getSuperclass());
+
+        Object ob = Integer.valueOf(123);
+        boolean isDouble = ob instanceof Double;
+        boolean isIntger = ob instanceof Integer;
+        boolean isNumber = ob instanceof Number;
+        boolean isSerializable = ob instanceof Serializable;
+        System.out.println(isSerializable );
+        System.out.println(isDouble);
     }
 }
 
