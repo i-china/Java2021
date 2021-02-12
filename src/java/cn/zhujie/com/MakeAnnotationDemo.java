@@ -1,9 +1,7 @@
 package cn.zhujie.com;
 
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+
+import java.lang.annotation.*;
 
 /**
  * @author HaleLv
@@ -38,11 +36,60 @@ public class MakeAnnotationDemo {
 
 class AnnotationDemos{
     @Retention(RetentionPolicy.RUNTIME)
+    public @interface Report {
+        int type() default 0;
+
+        String level() default "error";
+
+        String value() default "";
+    }
+    @Target(ElementType.TYPE)
+    public @interface ReportTwo{
+        int type() default 0;
+        String level() default "info";
+        String value() default "";
+    }
+}
+
+class AnnotaionONE{
+    @Target(ElementType.TYPE)
     public @interface Report{
         int type() default 0;
-        String level() default "error";
+        String level() default "info";
+        String value() default "";
+    }
+    @Target(ElementType.TYPE)
+    public @interface Reports{
+        Report[] value();
+    }
+}
+
+class AnnotationTwo{
+    @Retention(RetentionPolicy.RUNTIME)
+    public @interface Report{
+        int type() default 0;
+        String level() default "WARNING";
+        String value() default "";
+    }
+    @Target(ElementType.TYPE)
+    public @interface Reports{
+        Report[] value();
+    }
+}
+
+class Repeatabe{
+    @Repeatable(Reports.class)
+    @Target(ElementType.TYPE)
+    public @interface Report{
+        int type() default 0;
+        String level() default "WARNING";
         String value() default "";
     }
 
-
+    @Target(ElementType.TYPE)
+    public @interface Reports{
+        Report[] value();
+    }
 }
+
+
