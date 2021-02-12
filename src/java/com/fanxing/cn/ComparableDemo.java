@@ -30,3 +30,18 @@ class Person{
         return this.name + ", " + this.score;
     }
 }
+
+class Per implements Comparable<Per>{
+    String name;
+    int score;
+    Per(String name, int score){
+        this.name = name;
+        this.score = score;
+    }
+    public int compareTo(Per other){
+        return this.name.compareTo(other.name);
+    }
+    public String toString(){
+        return this.name + ", " + this.score;
+    }
+}
