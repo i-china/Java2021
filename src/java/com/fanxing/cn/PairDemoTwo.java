@@ -28,3 +28,19 @@ class PairTest<T> {
         return new PairTest<T>(one,two);
     }
 }
+
+// Beautiful
+class MoreGeneric<T,K>{
+    private T name;
+    private K age;
+    public MoreGeneric(T name, K age){
+        this.name = name;
+        this.age = age;
+    }
+    public T getName(){
+        return name;
+    }
+    public K getAge(){
+        return age;
+    }
+}
