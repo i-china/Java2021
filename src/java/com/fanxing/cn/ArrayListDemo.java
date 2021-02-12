@@ -47,7 +47,7 @@ class Arraylist<T> {
 //    public T get(int index){}
 }
 
-class ArrayList<T> implements List<T>{
+class ArrayLists<T> implements List<T>{
 
     @Override
     public int size() {
