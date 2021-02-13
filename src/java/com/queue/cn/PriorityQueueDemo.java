@@ -1,6 +1,7 @@
 package com.queue.cn;
 
 import javax.sound.midi.Soundbank;
+import java.util.LinkedList;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
@@ -12,7 +13,8 @@ public class PriorityQueueDemo {
     public static void main(String[] args) {
 //        offerDemo od = new offerDemo();
 //        Queue<User> ue = new PriorityQueue<>(new UserComparator());
-        Queue<User> ue = new PriorityQueue<>(new UserComparator());
+//        Queue<User> ue = new PriorityQueue<>(new UserComparator());
+        Queue<User> ue = new LinkedList<>();        // 先用Queue代替， PriorityQueue暂无法实现
         ue.offer(new User("Hale","123"));
         ue.offer(new User("root","3321"));
         ue.offer(new User("Java","321"));
