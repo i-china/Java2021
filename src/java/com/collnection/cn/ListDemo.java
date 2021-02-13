@@ -23,6 +23,51 @@ public class ListDemo {
             System.out.println(s);
         }*/
         IteratorDemo it = new IteratorDemo();
+        ListtoArray lr = new ListtoArray();
+        lr.listtoArr();
+        lr.itera();
+        lr.inter();
+    }
+}
+
+class ListtoArray{
+    ListtoArray(){
+        List<String> list = new ArrayList<>();
+        list.add("Hadoop");
+        list.add("Spark");
+        list.add("Flume");
+        Object[] arrays = list.toArray();
+        for(Object ar : arrays) {
+            System.out.println(ar);
+        }
+    }
+    void listtoArr(){
+        List<String> list = new ArrayList<>();
+        list.add("Hive");
+        list.add("flink");
+        String[] str = list.toArray(new String[3]);
+        for(String s : str){
+            System.out.println(s);
+        }
+    }
+    void itera(){
+        List<Integer> list = new ArrayList<>();
+        list.add(12);
+        list.add(123);
+        Number[] ns = list.toArray(new Number[3]);
+        for(Number s : ns){
+            System.out.println(s);
+        }
+    }
+    void inter(){
+        List<Integer> list = new ArrayList<>();
+        list.add(123);
+        list.add(234);
+        Integer[] ins = list.toArray(new Integer[list.size()]);
+//        Integer[] inss = list.toArray(Integer[]::new);
+        /*Integer[] insss = {123,12321};
+        List<Integer> lis = list.indexOf(insss);*/
+        System.out.println(ins);
     }
 }
 
@@ -58,9 +103,14 @@ class IteratorDemo {
         it.hasNext();
         String s = it.next();
         String ss = it.next();
+        for(;it.hasNext();){
+            String sss = it.next();
+            System.out.println(sss);
+        }
         System.out.println("iterator : " + s + ss );
        /* for(Iterator<String> it = list.iterator(); it.hasNext();){
-
+            String si = it.next();
+            System.out.println(si);  // hadoop hive spark
         }*/
     }
 }
