@@ -25,7 +25,7 @@ class test{
     }
     List<String> list = new ArrayList<>();  // only String type
     List<Integer> ins = new ArrayList<>();  // only Integer Type
-// Iterator bina li Collection
+// Iterator bina li Collection  java.util
 }
 
 
