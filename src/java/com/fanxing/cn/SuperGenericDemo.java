@@ -26,7 +26,5 @@ class Six<T>{
     public void setFirst(T first){
         this.first = first;
     }
-    /*public void setFirst(? super Integer){
-
-    }*/
+//    public void setFirst(? super Integer){}
 }
