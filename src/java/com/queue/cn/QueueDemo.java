@@ -16,7 +16,22 @@ public class QueueDemo {
 //        Queue1 q = new Queue1();
 //        peekDemo pd = new peekDemo();
 //        addDemo ad = new addDemo();
-        removeDemo rd = new removeDemo();
+//        removeDemo rd = new removeDemo();
+        elementDemo ed = new elementDemo();
+
+    }
+}
+class elementDemo{
+    elementDemo(){
+        Queue<String> ue = new LinkedList<>();
+        ue.offer("hadoop");
+        ue.offer("hive");
+        ue.offer("hbase");
+        String el = ue.element();
+        System.out.println(el);
+        for(String s : ue){
+            System.out.println(s);
+        }
     }
 }
 
