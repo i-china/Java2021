@@ -1,5 +1,8 @@
 package com.collnection.cn;
 
+import java.util.Deque;
+import java.util.LinkedList;
+
 /**
  * @author HaleLv
  * @date 2021-02-13
@@ -20,8 +23,21 @@ class Stack1{
             System.out.println("faid");
         }
     }
-    static String toHex(int n){
-        return "";
+    static String toHex(int n) {
+        Deque<String> q = new LinkedList<>();
+        do {
+            int i = n / 16;
+            int j = n % 16;
+            n = i;
+
+//            q.push("%x".formatted(j));
+        } while (n != 0);
+
+        StringBuilder sb = new StringBuilder();
+        while (q.peek() != null) {
+            sb.append(q.pop());
+        }
+        return sb.toString();
     }
 }
 
