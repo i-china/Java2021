@@ -2,6 +2,7 @@ package com.iofile.cn;
 
 import com.sun.media.sound.SoftTuning;
 
+import javax.sound.midi.Soundbank;
 import java.io.File;
 import java.io.IOException;
 
@@ -16,6 +17,18 @@ public class IODemo {
 //        FileDemo fd = new FileDemo();
 //        DemoFile df = new DemoFile();
         CreateFileDemo cfd = new CreateFileDemo();
+//        cfd.createTempFileDemo();
+        ListFileTest lfd = new ListFileTest();
+
+    }
+}
+
+class ListFileTest{
+    ListFileTest() throws IOException {
+        File f = new File("E:\\");
+        File[] fs1 = f.listFiles();
+//        printFiles(fs1);
+        System.out.println(fs1);
     }
 }
 
@@ -25,7 +38,19 @@ class CreateFileDemo{
         File f1 = new File("E:\\test.txt");
         if(f1.createNewFile()){
             System.out.println("ok");
+
         }
+        if(f1.delete()){
+            System.out.println("yes del ");
+        }else{
+            System.out.println("no ");
+        }
+    }
+    void createTempFileDemo() throws IOException {
+        File f = File.createTempFile("tmp-","txt");
+        f.deleteOnExit();
+        System.out.println(f.isFile());
+        System.out.println(f.getAbsolutePath());
     }
 }
 
