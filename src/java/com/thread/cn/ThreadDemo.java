@@ -8,15 +8,15 @@ package com.thread.cn;
 
 public class ThreadDemo {
     public static void main(String[] args) throws Exception {
-        Thread thread = new Thread();
-        thread.start();
-        MyThread mt = new MyThread();
-        mt.run();
-
-        Thread newt = new Thread(() -> {
-            System.out.println("start new thread new one");
-        });
-        newt.start();
+        System.out.println("main Start");
+        Thread t = new Thread(){
+            public void run(){
+                System.out.println("thread run");
+                System.out.println("thread end");
+            }
+        };
+        t.start();
+        System.out.println("main end");
     }
 }
 
