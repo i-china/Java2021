@@ -7,7 +7,23 @@ package com.thread.cn;
  */
 
 public class ThreadDemo {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
+        Thread thread = new Thread();
+        thread.start();
+        MyThread mt = new MyThread();
+        mt.run();
 
+        Thread newt = new Thread(() -> {
+            System.out.println("start new thread new one");
+        });
+        newt.start();
     }
 }
+
+class MyThread extends Thread{
+    @Override
+    public void run(){
+        System.out.println("start new thread!");
+    }
+}
+
